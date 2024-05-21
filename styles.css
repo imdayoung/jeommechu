@@ -73,6 +73,7 @@ body {
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
+    margin-top: 10px;
     margin-bottom: 10px;
     width: 30px;
     height: 30px;
@@ -155,4 +156,60 @@ body {
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+}
+
+/* 추천된 맛집 결과 섹션 스타일 */
+.result-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#restaurant-result,
+#person-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff5722; /* 주황색으로 변경 */
+    font-weight: bold;
+}
+
+
+/* 추천된 맛집 결과 링크 스타일 */
+#restaurant-result a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#restaurant-result a:hover {
+    text-decoration: underline;
+}
+
+/* 인원 입력란 스타일 */
+.person-input {
+    display: block;
+    width: calc(100% - 30px); /* 버튼 크기만큼 제외한 너비 */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 결제할 사람 뽑기 버튼 스타일 */
+.btn-custom + .result-section .btn {
+    margin-top: 20px;
+}
+
+.btn-custom + .result-section .btn:last-child {
+    margin-bottom: 20px;
 }
