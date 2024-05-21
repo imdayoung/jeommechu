@@ -33,10 +33,10 @@
 
 ## 🔔 주요 기능
 ### 🍔 멀티캠퍼스 세종대 교육생들을 위한 점심 메뉴 랜덤 추천
-<img src="https://github.com/imdayoung/jeommechu/assets/86220363/906fd92c-a6bc-4fde-81e2-c4ac77c44d69">
+<img src="https://github.com/imdayoung/jeommechu/assets/86220363/781a6567-7802-4d9b-9eae-eda322954deb">
 
 ### 💸 밥값 낼 사람 뽑기
-<img src="https://github.com/imdayoung/jeommechu/assets/86220363/87ce7c98-e518-453a-9943-81fbaa043fa3">
+<img src="https://github.com/imdayoung/jeommechu/assets/86220363/f93517f8-9529-4704-8e73-72e7909bd0b0">
 
 ### ✔ 향후 계획
 <ul>
