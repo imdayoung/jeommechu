@@ -1,0 +1,215 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px; /* 왼쪽 여백 추가 */
+}
+
+.header {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.card-title {
+    color: #ff5722;
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #ff5722, #ff8a50);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #e64a19, #ff7043);
+}
+
+.form-check-label {
+    font-size: 1.2rem;
+}
+
+#restaurant-result, #person-result {
+    font-size: 1.2rem;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.form-check-inline .form-check-input {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* 인원 추가/감소 버튼 스타일 */
+.btn-add-remove {
+    background-color: #ffc107;
+    color: #343a40;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-remove:hover {
+    background-color: #ff9800;
+}
+
+/* 이미지 스타일 */
+.food-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    vertical-align: middle; /* 체크박스와 세로 정렬 */
+}
+
+/* 한식 이미지 크기 */
+.food-icon-small {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    vertical-align: middle; /* 체크박스와 세로 정렬 */
+}
+
+.custom-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #ff5722;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* 추천된 맛집 결과 섹션 스타일 */
+.result-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#restaurant-result,
+#person-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff5722; /* 주황색으로 변경 */
+    font-weight: bold;
+}
+
+
+/* 추천된 맛집 결과 링크 스타일 */
+#restaurant-result a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#restaurant-result a:hover {
+    text-decoration: underline;
+}
+
+/* 인원 입력란 스타일 */
+.person-input {
+    display: block;
+    width: calc(100% - 30px); /* 버튼 크기만큼 제외한 너비 */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 결제할 사람 뽑기 버튼 스타일 */
+.btn-custom + .result-section .btn {
+    margin-top: 20px;
+}
+
+.btn-custom + .result-section .btn:last-child {
+    margin-bottom: 20px;
+}
