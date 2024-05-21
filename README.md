@@ -23,7 +23,7 @@
     </td>
   </tr>
   <tr>
-    <td><div><strong>J메뉴 추천 기능 구현</strong></div></td>
+    <td><div><strong>메뉴 추천 기능 구현</strong></div></td>
     <td><div><strong>README 작성 및 Merge</strong></div></td>
     <td><div><strong>화면 디자인 및 구성</strong></div></td>
     <td><div><strong>사람 뽑기 기능 구현</strong></div></td>
@@ -37,6 +37,12 @@
 
 ### 💸 밥값 낼 사람 뽑기
 <img src="https://github.com/imdayoung/jeommechu/assets/86220363/87ce7c98-e518-453a-9943-81fbaa043fa3">
+
+### ✔ 향후 계획
+<ul>
+  <li>모바일에서 -, + 버튼 모양 수정</li>
+  <li>식당 목록 주기적으로 추가 예정</li>
+</ul>
 &nbsp;
 
 ## 🛠 기술 스택
@@ -53,17 +59,21 @@
 
 ## 📜 협업 방식
 ### 📤 Commit Convention
-feat : 새로운 기능 추가 <br>
-fix : 버그 수정 <br>
-docs : 문서 수정 <br>
-style : 코드 포맷팅(코드 변경 없는 경우) <br>
-refactor : 코드 리팩토링 <br>
-release : 배포  <br>
+<ul>
+  <li>feat : 새로운 기능 추가</li>
+  <li>fix : 버그 수정</li>
+  <li>docs : 문서 수정</li>
+  <li>style : 코드 포맷팅(코드 변경 없는 경우)</li>
+  <li>refactor : 코드 리팩토링</li>
+  <li>release : 배포</li>
+</ul>
 
 ### ⛓ Branch Strategy
-main : 배포 시 사용 <br>
-dev : 기능 모아두는 브랜치, 개발이 완료되면 main브랜치로 merge <br>
-feature/기능명 : 하나의 기능을 개발하기 위한 브랜치, dev에서 만들고, 기능 구현이 완료되면 dev로 merge <br>
+<ul>
+  <li>main : 배포 시 사용</li>
+  <li>dev : 기능 모아두는 브랜치, 개발이 완료되면 main브랜치로 merge</li>
+  <lifeature/기능명 : 하나의 기능을 개발하기 위한 브랜치, dev에서 만들고, 기능 구현이 완료되면 dev로 merge></li>
+</ul>
 &nbsp;
 
 ## ❗ 배운점 및 어려웠던 부분
