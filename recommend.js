@@ -1,54 +1,53 @@
-const restaurants = {
-    "korean": [
-        { name: "카레당", link: "https://naver.me/5MUCn2IF" },
-        { name: "신사골", link: "https://naver.me/GG8oZ1ky" },
-        { name: "동궁찜닭", link: "https://naver.me/GMRm3AWC" },
-        { name: "파머스포케", link: "https://naver.me/xQNpYbI7" },
-        { name: "본래순대", link: "https://naver.me/I5FIMkL1" },
-        { name: "고향산천 원조 숯불닭갈비", link: "https://naver.me/GrSqSnhJ" },
-        { name: "춘천골닭갈비", link: "https://naver.me/FqSzWF4p" },
-        { name: "학생회관", link: "https://naver.me/F6mxi8mf" },
-        { name: "계절밥상", link: "https://naver.me/F3oYFgZJ" },
-        { name: "진관키친", link: "https://naver.me/FJ6F5RGL" },
-        { name: "철순이네김치찌개", link: "https://naver.me/x8li1y6k" },
-        { name: "우동연가", link: "https://naver.me/IG6pCido" },
-        { name: "싸다김밥", link: "https://naver.me/F5baEy8F" }
-    ],
-    "chinese": [
-        { name: "세종원", link: "https://naver.me/xXr7Z1mq" },
-        { name: "미식반점", link: "https://naver.me/GGhUhR4E" },
-        { name: "빠오즈푸", link: "https://naver.me/5MUCn2IF" },
-        { name: "시홍쓰", link: "https://naver.me/x9JcNGds" }
-    ],
-    "japanese": [
-        { name: "행복한 그릇", link: "https://naver.me/54VLPVte" },
-        { name: "스시붐", link: "https://naver.me/GDc5idSq" },
-        { name: "백쉐프초밥가게", link: "https://naver.me/x8lEhcay" },
-        { name: "카토카츠", link: "https://naver.me/GjGp3jga" }
-    ],
-    
-};
+async function loadRestaurants() {
+    // 엑셀 파일을 읽기 위해 fetch 사용
+    const response = await fetch('restaurants.xlsx');
+    const arrayBuffer = await response.arrayBuffer();
+    const data = new Uint8Array(arrayBuffer);
+    const workbook = XLSX.read(data, { type: 'array' });
 
+    // 첫 번째 시트의 데이터 가져오기
+    const sheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[sheetName];
+    const json = XLSX.utils.sheet_to_json(worksheet);
 
-// 맛집 추천 기능
-function recommendRestaurant() {
-    // 선택된 카테고리들을 담을 배열을 초기화합니다.
-    const selectedCategories = Object.keys(restaurants).filter(category => document.getElementById(category).checked);
+    // 데이터를 처리하여 restaurants 객체에 저장
+    const restaurants = {};
+    json.forEach(row => {
+        const category = row.Category.toLowerCase();
+        if (!restaurants[category]) {
+            restaurants[category] = [];
+        }
+        restaurants[category].push({ name: row.Name, link: row.Link });
+    });
 
-    // 선택된 카테고리가 없을 경우 메시지를 표시하고 함수를 종료합니다.
-    if (selectedCategories.length === 0) {
-        document.getElementById('restaurant-result').textContent = '적어도 한 가지 카테고리를 선택하세요.';
+    return restaurants;
+}
+
+async function recommendRestaurant() {
+    // 카테고리 체크박스 상태 확인
+    const categories = ['korean', 'chinese', 'japanese'].filter(cat => document.getElementById(cat).checked);
+
+    if (categories.length === 0) {
+        alert('카테고리를 하나 이상 선택하세요.');
         return;
     }
 
-    // 선택된 카테고리 중에서 무작위로 한 개를 선택합니다.
-    const randomCategory = selectedCategories[Math.floor(Math.random() * selectedCategories.length)];
-    // 선택된 카테고리에 속한 음식 가게들을 가져옵니다.
-    const categoryRestaurants = restaurants[randomCategory];
+    // 엑셀 파일에서 데이터를 로드하고 처리
+    const restaurants = await loadRestaurants();
 
+    // 선택된 카테고리에서 레스토랑 목록 생성
+    const categoryRestaurants = categories.flatMap(category => restaurants[category] || []);
 
+    if (categoryRestaurants.length === 0) {
+        alert('선택된 카테고리에 레스토랑이 없습니다.');
+        return;
+    }
 
-    // 선택된 카테고리에서 무작위로 한 곳의 정보를 가져와서 결과를 출력합니다.
-    const randomRestaurant = categoryRestaurants[Math.floor(Math.random() * categoryRestaurants.length)];
-    document.getElementById('restaurant-result').innerHTML = `<a href="${randomRestaurant.link}" target="_blank">${randomRestaurant.name}</a>`;
+    // 랜덤으로 레스토랑 선택
+    const randomIndex = Math.floor(Math.random() * categoryRestaurants.length);
+    const selectedRestaurant = categoryRestaurants[randomIndex];
+
+    // 결과 출력
+    const resultElement = document.getElementById('restaurant-result');
+    resultElement.innerHTML = `<a href="${selectedRestaurant.link}" target="_blank">${selectedRestaurant.name}</a>`;
 }
