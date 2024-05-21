@@ -5,7 +5,7 @@
 <table>
   <tr>
     <td align="center"><img src="https://github.com/imdayoung/jeommechu/assets/86220363/9cb5c217-c1c7-4604-a035-bd3e274c2db1" alt="notion avatar" width="180px"></td>
-    <td align="center"><img src="https://github.com/SWM-AAA/.github/assets/68915238/ce5a3c51-60e5-4fb4-8bb1-85a2fbca65ea" alt="Alt text" width="180px"></td>
+    <td align="center"><img src="https://github.com/imdayoung/jeommechu/assets/86220363/0a9989d5-fdd1-45df-bfe1-59edf97e39f6" alt="Alt text" width="180px"></td>
     <td align="center"><img src="https://github.com/imdayoung/jeommechu/assets/86220363/c2848429-71b6-4db8-aea0-9a97e2e4ffea" alt="notion avatar" width="180px"></td>
     <td align="center"><img src="https://github.com/imdayoung/jeommechu/assets/86220363/ab09ef93-7e2e-42e1-9e7a-21ca4e20de41" alt="notion avatar" width="180px"></td>
   </tr>
