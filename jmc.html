@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심 메뉴 추천 사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .category, .person {
+            margin-bottom: 20px;
+        }
+        .category input, .person input {
+            margin-right: 10px;
+        }
+        .person-list {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>점심 메뉴 추천 사이트</h1>
+        
+        <div class="category">
+            <h2>카테고리 선택</h2>
+            <label><input type="checkbox" id="korean"> 한식</label>
+            <label><input type="checkbox" id="chinese"> 중식</label>
+            <label><input type="checkbox" id="japanese"> 일식</label>
+            <!-- js기능 추가 1 맛집 추천 -->
+            <button onclick="recommendRestaurant()">추천 받기</button>
+            <p id="restaurant-result"></p>
+        </div>
+
+        <div class="person">
+            <h2>결제할 사람 선택</h2>
+            <div>
+                <!-- js기능 추가 2-1 인원수 하나 빼기 -->
+                <button onclick="removePerson()">-</button>
+                <!-- js기능 추가 2-1 인원수 하나 추가 -->
+                <button onclick="addPerson()">+</button>
+            </div>
+            <div id="person-list" class="person-list"></div>
+            <!-- js기능 추가 2-3 결제할 사람 랜덤 -->
+            <button onclick="selectRandomPerson()">결제할 사람 뽑기</button>
+            <p id="person-result"></p>
+        </div>
+    </div>
+    <!-- 스크립트 경로지정 -->
+    <script src="script.js"></script>
+</body>
+</html>
