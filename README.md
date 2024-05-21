@@ -23,9 +23,9 @@
     </td>
   </tr>
   <tr>
-    <td><div><strong>메뉴 추천 기능 구현</strong></div></td>
+    <td><div><strong>J메뉴 추천 기능 구현</strong></div></td>
     <td><div><strong>README 작성 및 Merge</strong></div></td>
-    <td><div><strong>HTML 화면 구성</strong></div></td>
+    <td><div><strong>화면 디자인 및 구성</strong></div></td>
     <td><div><strong>사람 뽑기 기능 구현</strong></div></td>
   </tr>
 </table>
@@ -33,19 +33,16 @@
 
 ## 🔔 주요 기능
 ### 🍔 멀티캠퍼스 세종대 교육생들을 위한 점심 메뉴 랜덤 추천
-<div>
-  
-</div>
+<img src="https://github.com/imdayoung/jeommechu/assets/86220363/906fd92c-a6bc-4fde-81e2-c4ac77c44d69">
 
 ### 💸 밥값 낼 사람 뽑기
-<div>
-  
-</div>
+<img src="https://github.com/imdayoung/jeommechu/assets/86220363/87ce7c98-e518-453a-9943-81fbaa043fa3">
 &nbsp;
 
 ## 🛠 기술 스택
 <div>
   <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
 </div>
 <div>
