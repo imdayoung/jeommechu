@@ -87,19 +87,19 @@ body {
 
 /* 이미지 스타일 */
 .food-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     margin-right: 10px;
     vertical-align: middle; /* 체크박스와 세로 정렬 */
 }
 
 /* 한식 이미지 크기 */
 .food-icon-small {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-right: 20px;
     margin-bottom: 5px;
-    margin-top: 12px;
+    margin-top: 8.5px;
     vertical-align: middle; /* 체크박스와 세로 정렬 */
 }
 
@@ -212,4 +212,23 @@ body {
 
 .btn-custom + .result-section .btn:last-child {
     margin-bottom: 20px;
+}
+
+.food-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    margin-top: 5px; /* 텍스트와 아이콘 사이의 간격 조정 */
+}
+
+.form-check-label {
+    font-size: 0.9rem; /* 텍스트의 크기 조정 */
+    color: #ffffff; /* 폰트 색상을 흰색으로 변경 */
+    font-family: 'Noto Sans KR', sans-serif; /* 선택한 폰트 패밀리 적용 */
+    background-color: #ff5722; /* 배경색을 주황색으로 설정 */
+    border-radius: 15px; /* 둥근 테두리 설정 */
+    padding: 7px 12px; /* 내부 여백 조정 */
+    margin-top: 5px; /* 텍스트와 아이콘 사이의 간격 조정 */
+    display: inline-block; /* 인라인 요소로 변경하여 라벨이 길어도 한 줄에 표시되도록 설정 */
 }
