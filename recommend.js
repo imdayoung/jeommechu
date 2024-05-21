@@ -25,7 +25,7 @@ async function loadRestaurants() {
 
 async function recommendRestaurant() {
     // 카테고리 체크박스 상태 확인
-    const categories = ['korean', 'chinese', 'japanese'].filter(cat => document.getElementById(cat).checked);
+    const categories = ['korean', 'chinese', 'japanese', 'fastfood', 'alcohol'].filter(cat => document.getElementById(cat).checked);
 
     if (categories.length === 0) {
         alert('카테고리를 하나 이상 선택하세요.');
