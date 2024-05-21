@@ -1,4 +1,5 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=FF5722&height=180&section=header&text=JEOMMECHU&fontSize=50" />
+<div align="center"><a href="http://52.201.25.146/">🧡 점심 메뉴 추천 바로 가기 🧡</a></div>
 
 ## 👨‍👨‍👧‍👦 팀원 소개
 <table>
